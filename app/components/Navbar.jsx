@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className='md:hidden ml-auto'>
         <button
           onClick={() => setNavbarOpen(!navbarOpen)}
-          className='fixed top-4 right-4 z-50 flex items-center px-3 py-2 border cursor-pointer border-slate-200 text-slate-200 hover:text-white hover:border-white '
+          className='fixed top-4 right-4 z-50 flex items-center px-3 py-2 border cursor-pointer border-slate-200 text-slate-200 hover:text-white hover:border-white  '
         >
           {navbarOpen ? (
             <XMarkIcon className='h-5 w-5' />
@@ -34,11 +34,14 @@ const Navbar = () => {
 
       {/* menu mobile */}
       {navbarOpen && (
-        <div className='fixed top-0 left-0 w-full py-20 space-y-6 z-40 backdrop-blur-md'>
+        <div className='fixed top-0 left-0 w-full py-20 space-y-6 z-40 backdrop-blur-md h-full'>
           <ul className='flex gap-4 flex-col text-center '>
             {navLinks.map((item) => (
               <li key={item.label}>
-                <a className='text-white text-lg' href={item.href}>
+                <a
+                  className='   text-white text-lg hover:text-gray-500 '
+                  href={item.href}
+                >
                   {item.label}
                 </a>
               </li>
